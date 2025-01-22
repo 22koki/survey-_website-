@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Surveying Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        header {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 3rem;
+
+        }
+        .navbar {
+    background: linear-gradient(135deg, green 50%, grey 50%);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(135deg, brown 50%, grey 50%);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.2);
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: lightgreen;
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: green;
+    color: white;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.container {
+    max-width: 1200px;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+
+.container-fluid {
+    max-width: 1200px; /* Optional: Set a max width for better alignment */
+    margin: 0 auto;
+}
+
+
+        .carousel-inner img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .service-description {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+        }
+        .services-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #2e472c; /* Green color */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    animation: slide-in 0.8s ease-out;
+}
+
+.service-item .icon {
+    font-size: 2.5rem;
+    color: #6c757d; /* Grey color */
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.service-item h3 {
+    font-size: 1.6rem;
+    color: #4e3623; /* Brown color */
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.service-item p {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.services-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-out;
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.about-us-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2e472c; /* Green color */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fade-in 1.2s ease-out;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: slide-in 1s ease-out;
+}
+
+.about-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fade-in 1.4s ease-out;
+}
+
+.about-highlights li {
+    font-size: 1rem;
+    color: #4e3623; /* Brown color */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-highlights i {
+    color: #2e472c; /* Green color */
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #2e472c; /* Green color */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: bounce-in 1s ease-out;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #4e3623; /* Brown color */
+}
+
+.about-us-image {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: zoom-in 1.2s ease-out;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce-in {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.projects-section {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #f0f4f8, #e1e8f0); /* Light blue gradient background */
+    text-align: center;
+}
+
+.projects-section .section-title {
+    font-size: 3rem;
+    color: #1d3557;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.projects-section .section-subtitle {
+    font-size: 1.4rem;
+    color: #457b9d;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.projects-section .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px; /* Increased spacing between items */
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.projects-section .project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 100%;
+    max-width: 350px; /* Larger cards */
+    position: relative;
+}
+
+.projects-section .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.projects-section .project-image {
+    height: 250px; /* Larger image container */
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.projects-section .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits nicely */
+    transition: transform 0.5s ease-in-out;
+}
+
+.projects-section .project-card:hover .project-image img {
+    transform: scale(1.1); /* Bigger zoom on hover */
+}
+
+.projects-section .project-title {
+    font-size: 1.5rem;
+    color: #1d3557;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    letter-spacing: 0.5px;
+}
+
+.projects-section .project-description {
+    font-size: 1rem;
+    color: #6c757d;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.projects-section .view-more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1d3557;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.projects-section .view-more-btn:hover {
+    background-color: #457b9d;
+    transform: translateY(-3px);
+}
+
+.projects-section .hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects-section [data-aos="fade-up"] {
+    animation: fade-in 0.8s ease-out;
+}
+
+.projects-section [data-aos="fade-up"][data-aos-delay="200"] {
+    animation-delay: 0.2s;
+}
+
+.projects-section [data-aos="fade-up"][data-aos-delay="400"] {
+    animation-delay: 0.4s;
+}
+
+.projects-section [data-aos="fade-up"][data-aos-delay="600"] {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-section .row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section .row {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+    .projects-section .project-card {
+        max-width: 90%; /* Adjust card width for small screens */
+    }
+}
+/* General Styles */
+.happy-clients-section {
+    position: relative;
+    padding: 60px 0;
+    background: url('path/to/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Carousel Styles */
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.client-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+}
+
+.client-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffd700; /* Gold color for the name */
+    margin-bottom: 15px;
+}
+
+.client-message {
+    font-size: 1em;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Carousel Navigation (if needed) */
+.carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Styling for the Carousel Navigation Arrows */
+.carousel-wrapper::after {
+    background-image: url('path-to-right-arrow-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carousel-wrapper::before {
+    background-image: url('path-to-left-arrow-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        }
+   
+    </style>
+</head>
+<body>
+   
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/Images/stock-vector-surveyor-flat-orange-and-navy-blue-logo-1181551888.jpg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
+                <span class="company-name">LANDMARK SURVEYORS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#service1">Boundary Surveys</a></li>
+                            <li><a class="dropdown-item" href="#service2">Topographic Surveys</a></li>
+                            <li><a class="dropdown-item" href="#service3">Construction Staking</a></li>
+                            <li><a class="dropdown-item" href="#service4">Engineering Surveys</a></li>
+                            <li><a class="dropdown-item" href="#service5">Geographic Surveys</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    >
+      </nav>
+
+    <div id="serviceCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Images/pexels-digitalbuggu-171328.jpg"class="d-block w-100" alt="Survey Image 1">
+                <div class="service-description">Boundary Surveys: Accurate measurements for legal and construction purposes.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/pexels-magda-ehlers-pexels-636342.jpg" class="d-block w-100" alt="Survey Image 2">
+                <div class="service-description">Topographic Surveys: Detailed mapping of land elevation and features.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/pexels-alexandertencio-1626857.jpg" class="d-block w-100" alt="Survey Image 3">
+                <div class="service-description">Construction Staking: Precise staking for all phases of construction.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/pexels-punttim-443422.jpg" class="d-block w-100" alt="Survey Image 4">
+                <div class="service-description">Engineering Surveys: Supporting engineering designs with accurate data.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/pexels-tomfisk-2464069.jpg" class="d-block w-100" alt="Survey Image 5">
+                <div class="service-description">Geographic Surveys: Analyzing terrain for various applications.</div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <section class="about-us-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Column: Image -->
+                    <div class="col-md-6 text-center">
+                        <img src="Images/person1.jpeg" alt="About Us" class="about-us-image">
+                    </div>
+        
+                    <!-- Right Column: Text Content -->
+                    <div class="col-md-6">
+                        <h2 class="section-title">About Us</h2>
+                        <p class="about-description">
+                            We are a leading surveying company committed to providing precise and reliable geospatial solutions. With years of experience, we specialize in boundary surveys, topographic surveys, and engineering surveys that meet global standards.
+                        </p>
+                        <p class="about-description">
+                            Our mission is to empower our clients with accurate data for informed decision-making, ensuring successful project outcomes. We pride ourselves on innovation, professionalism, and dedication to excellence.
+                        </p>
+                        <ul class="about-highlights">
+                            <li><i class="fas fa-check-circle"></i> Cutting-edge surveying technologies</li>
+                            <li><i class="fas fa-check-circle"></i> Experienced and certified professionals</li>
+                            <li><i class="fas fa-check-circle"></i> Customer-focused solutions</li>
+                            <li><i class="fas fa-check-circle"></i> Commitment to sustainability</li>
+                        </ul>
+                        <a href="#learn-more" class="btn learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+vv        
+        <section class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title">Our Services</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Left Column: Services -->
+                    <div class="col-md-7">
+                        <div class="service-item">
+                            <i class="fas fa-map-marked-alt icon"></i>
+                            <h3>Boundary Surveys</h3>
+                            <p>We provide accurate boundary surveys to establish property lines, helping to prevent disputes and ensure proper land ownership documentation.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-mountain icon"></i>
+                            <h3>Topographic Surveys</h3>
+                            <p>We create detailed topographic maps to capture elevation, terrain features, and natural and man-made objects for construction and planning.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-tools icon"></i>
+                            <h3>Construction Staking</h3>
+                            <p>Our experts mark out construction sites precisely, ensuring that structures are built according to engineering and architectural designs.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-drafting-compass icon"></i>
+                            <h3>Engineering Surveys</h3>
+                            <p>We collect detailed data to assist in planning and executing infrastructure projects such as roads, bridges, and drainage systems.</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-globe icon"></i>
+                            <h3>Geographic Surveys</h3>
+                            <p>We offer extensive geographic surveys for data collection and mapping, enabling efficient planning and resource management.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Right Column: Image -->
+                    <div class="col-md-5 text-center">
+                        <img src="Images/beacon.webp" alt="Surveying Equipment" class="services-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Our Projects</h2>
+                <p class="section-subtitle">Discover some of the impactful projects we’ve worked on to deliver exceptional results for our clients.</p>
+                <div class="row">
+                    <!-- First 6 Projects -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="Images/pexels-photo-12737420.jpeg" alt="Boundary Mapping Project">
+                        </div>
+                        <h3 class="project-title">Boundary Mapping</h3>
+                        <p class="project-description">
+                            Providing precise boundary surveys for large-scale agricultural land and urban development projects.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="Images/pexels-photo-9751100.jpeg" alt="Infrastructure Surveys Project">
+                        </div>
+                        <h3 class="project-title">Infrastructure Surveys</h3>
+                        <p class="project-description">
+                            Delivering accurate topographic and engineering surveys for road and bridge construction.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="Images/free-photo-of-aerial-view-of-construction-site-in-londrina-brazil.jpeg" alt="Geospatial Solutions Project">
+                        </div>
+                        <h3 class="project-title">Geospatial Solutions</h3>
+                        <p class="project-description">
+                            Developing GIS-based solutions for urban planning and environmental conservation.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="Images/pexels-digitalbuggu-171328.jpg" alt="Construction Survey Project">
+                        </div>
+                        <h3 class="project-title">Construction Survey</h3>
+                        <p class="project-description">
+                            Precision surveys for construction projects including residential and commercial buildings.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="Images/pexels-photo-5802827.jpeg" alt="Urban Development Project">
+                        </div>
+                        <h3 class="project-title">Urban Development</h3>
+                        <p class="project-description">
+                            Surveying for efficient urban planning and infrastructure development.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="Images/free-photo-of-close-up-of-earthy-soil-texture-with-rocks.jpeg" alt="Soil Analysis Project">
+                        </div>
+                        <h3 class="project-title">Soil Analysis</h3>
+                        <p class="project-description">
+                            Comprehensive soil testing and analysis for agriculture and construction projects.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Hidden Projects -->
+                <div class="row hidden" id="extra-projects">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="Images/pexels-photo-9751100.jpeg" alt="Infrastructure Expansion Project">
+                        </div>
+                        <h3 class="project-title">Infrastructure Expansion</h3>
+                        <p class="project-description">
+                            Enhancing existing infrastructure with modern technology and precise planning.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="Images/pexels-punttim-443422.jpg" alt="Landscape Survey Project">
+                        </div>
+                        <h3 class="project-title">Landscape Survey</h3>
+                        <p class="project-description">
+                            Topographical mapping for sustainable landscaping and gardening projects.
+                        </p>
+                    </div>
+    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-image">
+                            <img src="Images/pexels-magda-ehlers-pexels-636342.jpg" alt="Environmental Impact Study">
+                        </div>
+                        <h3 class="project-title">Environmental Study</h3>
+                        <p class="project-description">
+                            Conducting studies to minimize environmental impact and promote sustainability.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- View More Button -->
+                <div class="text-center">
+                    <button class="view-more-btn" id="view-more-btn">View More Projects</button>
+                </div>
+            </div>
+        </section>
+        <section class="happy-clients-section">
+            <div class="container">
+                <h2 class="section-title">Our Happy Clients</h2>
+                <p class="section-subtitle">We take pride in delivering exceptional results for our clients.</p>
+        
+                <!-- Carousel Wrapper -->
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <!-- Client 1 -->
+                        <div class="client-card">
+                            <img src="Images/beacon2.webp" alt="Client 1" class="client-logo">
+                            <p class="client-name">Client 1</p>
+                            <p class="client-message">"Professional and reliable service. Their work transformed our operations!"</p>
+                        </div>
+                        
+                        <!-- Client 2 -->
+                        <div class="client-card">
+                            <img src="Images/p.jpeg" alt="Client 2" class="client-logo">
+                            <p class="client-name">Client 2</p>
+                            <p class="client-message">"A great team to work with, they always exceed expectations!"</p>
+                        </div>
+        
+                        <!-- Client 3 -->
+                        <div class="client-card">
+                            <img src="Images/surv.jpeg" alt="Client 3" class="client-logo">
+                            <p class="client-name">Client 3</p>
+                            <p class="client-message">"Highly skilled professionals with outstanding customer service."</p>
+                        </div>
+        
+                        <!-- Client 4 -->
+                        <div class="client-card">
+                            <img src="Images/beacon.webp" alt="Client 4" class="client-logo">
+                            <p class="client-name">Client 4</p>
+                            <p class="client-message">"Their expertise helped us deliver projects on time and on budget."</p>
+                        </div>
+        
+                        <!-- Client 5 -->
+                        <div class="client-card">
+                            <img src="Images/person1.jpeg" alt="Client 5" class="client-logo">
+                            <p class="client-name">Client 5</p>
+                            <p class="client-message">"The best service we’ve received, they’re always available when needed."</p>
+                        </div>
+        
+                        <!-- Client 6 -->
+                        <div class="client-card">
+                            <img src="Images/p.jpeg" alt="Client 6" class="client-logo">
+                            <p class="client-name">Client 6</p>
+                            <p class="client-message">"Innovative and dedicated, they really made a difference to our project."</p>
+                        </div>
+        
+                        <!-- Client 7 -->
+                        <div class="client-card">
+                            <img src="Images/person1.jpeg" alt="Client 7" class="client-logo">
+                            <p class="client-name">Client 7</p>
+                            <p class="client-message">"Professional team, always exceeding our expectations!"</p>
+                        </div>
+        
+                        <!-- Client 8 -->
+                        <div class="client-card">
+                            <img src="Images/p.jpeg" alt="Client 8" class="client-logo">
+                            <p class="client-name">Client 8</p>
+                            <p class="client-message">"A trusted partner for our business growth. Highly recommend!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+        <section id="contact" class="mt-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> contact@landsurveying.com</p>
+                    <p><strong>Address:</strong> 123 Main Street, Survey City, SC 12345</p>
+                </div>
+                <div class="col-md-6">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Land Surveying Services. All Rights Reserved.</p>
+    </footer>
+    
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        function initMap() {
+            const location = { lat: 37.7749, lng: -122.4194 }; // Example: San Francisco
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const viewMoreBtn = document.getElementById('view-more-btn');
+        const extraProjects = document.getElementById('extra-projects');
+
+        viewMoreBtn.addEventListener('click', () => {
+            extraProjects.classList.toggle('hidden');
+            viewMoreBtn.textContent = extraProjects.classList.contains('hidden') ? 'View More Projects' : 'View Less Projects';
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
