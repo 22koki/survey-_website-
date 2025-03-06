@@ -23,17 +23,29 @@
 
         }
         .navbar {
-    background: linear-gradient(135deg, green 50%, grey 50%);
+    background: linear-gradient(135deg, rgb(9, 151, 9) 50%, rgb(46, 44, 44) 50%);
     padding: 1rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s ease;
 }
 
 .navbar:hover {
-    background: linear-gradient(135deg, brown 50%, grey 50%);
+    background: linear-gradient(135deg, rgb(15, 49, 2) 50%, grey 50%);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between logo and text */
+    margin-left: -290px; /* Moves the entire brand section left */
 }
 
 .navbar-brand img {
+    width: 200px;
+    
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -44,9 +56,10 @@
 .company-name {
     font-size: 2rem;
     font-weight: bold;
-    font-style: italic;
-    color: white;
-    margin-left: 10px;
+    font-style: oblique;
+    color: rgb(14, 13, 13);
+    margin-left: 20px;
+    margin-top: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -102,10 +115,21 @@
 }
 
 
-        .carousel-inner img {
-            height: 400px;
-            object-fit: cover;
-        }
+.carousel-inner img {
+    width: 100%; /* Makes the image take up the full width */
+    height: 100%; /* Ensures it fills the entire carousel */
+    object-fit: cover; /* Fills the area without distortion */
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Set a fixed height to maintain uniformity */
+    object-fit: cover; /* Ensures the image fills the area properly */
+}
+
+
+
 
         .service-description {
             position: absolute;
@@ -191,6 +215,7 @@
 .about-us-section {
     padding: 60px 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    background-size: 400% 100%;
 }
 
 .section-title {
@@ -603,28 +628,33 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/Images/stock-vector-surveyor-flat-orange-and-navy-blue-logo-1181551888.jpg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
-                <span class="company-name">LANDMARK SURVEYORS</span>
+                <img src="/Images/Screenshot from 2025-02-05 19-01-55.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                <span class="company-name">EARTH SCOPE COMPANY LTD</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="#service1">Boundary Surveys</a></li>
-                            <li><a class="dropdown-item" href="#service2">Topographic Surveys</a></li>
-                            <li><a class="dropdown-item" href="#service3">Construction Staking</a></li>
-                            <li><a class="dropdown-item" href="#service4">Engineering Surveys</a></li>
-                            <li><a class="dropdown-item" href="#service5">Geographic Surveys</a></li>
+                            <li><a class="dropdown-item" href="deed.html">Deed Plans</a></li>
+                            <li><a class="dropdown-item" href="mut.html">Mutation</a></li>
+                            <li><a class="dropdown-item" href="sectionalprop.html">Sectional Property</a></li>
+                            <li><a class="dropdown-item" href="eng.html">Engineering</a></li>
+                            <li><a class="dropdown-item" href="pipe.html">Pipelines</a></li>
+                            <li><a class="dropdown-item" href="waterpower.html">Water Power Lines</a></li>
+                            <li><a class="dropdown-item" href="landplan.html">Land Planning</a></li>
+                            <li><a class="dropdown-item" href="agri.html">Rural & Potential Agriculture Surveys</a></li>
+                            <li><a class="dropdown-item" href="landconsult.html">General Property Consultancy</a></li>
                         </ul>
+                        
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
@@ -632,32 +662,50 @@
         </div>
     </nav>
     
-    >
+    
       </nav>
 
-    <div id="serviceCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+      <div id="serviceCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/Images/pexels-digitalbuggu-171328.jpg"class="d-block w-100" alt="Survey Image 1">
-                <div class="service-description">Boundary Surveys: Accurate measurements for legal and construction purposes.</div>
+                <img src="/Images/close-up-depiction-of-ownership-and-control-featuring-elements-like-keys-property-deeds-and-ownership-documents-representing-authority-responsibili-2S3AX6K.jpg" class="d-block w-100" alt="Deed Plans">
+                <div class="service-description">Deed Plans: Preparation of legal land ownership documents.</div>
             </div>
             <div class="carousel-item">
-                <img src="Images/pexels-magda-ehlers-pexels-636342.jpg" class="d-block w-100" alt="Survey Image 2">
-                <div class="service-description">Topographic Surveys: Detailed mapping of land elevation and features.</div>
+                <img src="/Images/pexels-magda-ehlers-pexels-636342.jpg" class="d-block w-100" alt="Mutation">
+                <div class="service-description">Mutation: Subdivision or consolidation of land parcels.</div>
             </div>
             <div class="carousel-item">
-                <img src="Images/pexels-alexandertencio-1626857.jpg" class="d-block w-100" alt="Survey Image 3">
-                <div class="service-description">Construction Staking: Precise staking for all phases of construction.</div>
+                <img src="/Images/pexels-alexandertencio-1626857.jpg" class="d-block w-100" alt="Sectional Property">
+                <div class="service-description">Sectional Property: Surveying for multi-unit developments.</div>
             </div>
             <div class="carousel-item">
-                <img src="Images/pexels-punttim-443422.jpg" class="d-block w-100" alt="Survey Image 4">
-                <div class="service-description">Engineering Surveys: Supporting engineering designs with accurate data.</div>
+                <img src="/Images/enginerring.webp" class="d-block w-100" alt="Engineering">
+                <div class="service-description">Engineering: Providing data for construction and infrastructure.</div>
             </div>
             <div class="carousel-item">
-                <img src="/Images/pexels-tomfisk-2464069.jpg" class="d-block w-100" alt="Survey Image 5">
-                <div class="service-description">Geographic Surveys: Analyzing terrain for various applications.</div>
+                <img src="/Images/78411ec77c0b5ec32f3442c14a0aa261.jpg" class="d-block w-100" alt="Pipelines">
+                <div class="service-description">Pipelines: Surveying and mapping for pipeline installations.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/istockphoto-174433078-612x612.jpg" class="d-block w-100" alt="Water Power Lines">
+                <div class="service-description">Water & Power Lines: Planning and surveying for utility lines.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/pexels-photo-8319061.jpeg" class="d-block w-100" alt="Land Planning">
+                <div class="service-description">Land Planning: Strategic planning for land use and development.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/free-photo-of-aerial-view-of-construction-site-in-londrina-brazil.jpeg" class="d-block w-100" alt="Rural Agriculture">
+                <div class="service-description">Rural & Agriculture Surveys: Supporting agricultural projects.</div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/prop.webp" class="d-block w-100" alt="General Property Consultancy">
+                <div class="service-description">General Property Consultancy: Professional land and property advice.</div>
             </div>
         </div>
+    </div>
+    
         <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -697,157 +745,180 @@
                 </div>
             </div>
         </section>
-vv        
-        <section class="services-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="section-title">Our Services</h2>
-                    </div>
+
+<section class="services-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Our Services</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left Column: Services -->
+            <div class="col-md-7">
+                <div class="service-item">
+                    <i class="fas fa-map-marked-alt icon"></i>
+                    <h3>Deed Plans</h3>
+                    <p>We prepare legal deed plans to define property boundaries, ensuring accuracy and compliance with regulations.</p>
                 </div>
-                <div class="row">
-                    <!-- Left Column: Services -->
-                    <div class="col-md-7">
-                        <div class="service-item">
-                            <i class="fas fa-map-marked-alt icon"></i>
-                            <h3>Boundary Surveys</h3>
-                            <p>We provide accurate boundary surveys to establish property lines, helping to prevent disputes and ensure proper land ownership documentation.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-mountain icon"></i>
-                            <h3>Topographic Surveys</h3>
-                            <p>We create detailed topographic maps to capture elevation, terrain features, and natural and man-made objects for construction and planning.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-tools icon"></i>
-                            <h3>Construction Staking</h3>
-                            <p>Our experts mark out construction sites precisely, ensuring that structures are built according to engineering and architectural designs.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-drafting-compass icon"></i>
-                            <h3>Engineering Surveys</h3>
-                            <p>We collect detailed data to assist in planning and executing infrastructure projects such as roads, bridges, and drainage systems.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-globe icon"></i>
-                            <h3>Geographic Surveys</h3>
-                            <p>We offer extensive geographic surveys for data collection and mapping, enabling efficient planning and resource management.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Right Column: Image -->
-                    <div class="col-md-5 text-center">
-                        <img src="Images/beacon.webp" alt="Surveying Equipment" class="services-image">
-                    </div>
+                <div class="service-item">
+                    <i class="fas fa-file-contract icon"></i>
+                    <h3>Mutation</h3>
+                    <p>We handle land mutations, including subdivision and consolidation processes, for proper land management.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-building icon"></i>
+                    <h3>Sectional Property</h3>
+                    <p>We provide expert surveys for multi-unit properties, ensuring compliance with sectional property regulations.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cogs icon"></i>
+                    <h3>Engineering</h3>
+                    <p>Our engineering surveys support infrastructure projects, including roads, bridges, and structural developments.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-industry icon"></i>
+                    <h3>Pipelines</h3>
+                    <p>We conduct pipeline route surveys to optimize design and construction for water, gas, and oil transport systems.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bolt icon"></i>
+                    <h3>Water & Power Lines</h3>
+                    <p>We survey and plan power and water line installations for efficiency and sustainability.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-map icon"></i>
+                    <h3>Land Planning</h3>
+                    <p>We offer strategic land-use planning to maximize development potential while ensuring environmental sustainability.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tractor icon"></i>
+                    <h3>Rural & Agriculture Surveys</h3>
+                    <p>Our surveys support agricultural development, including irrigation planning and farm mapping.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-comments icon"></i>
+                    <h3>General Property Consultancy</h3>
+                    <p>We provide expert consultancy on land and property matters to guide clients in decision-making.</p>
                 </div>
             </div>
-        </section>
-        <section class="projects-section">
-            <div class="container">
-                <h2 class="section-title">Our Projects</h2>
-                <p class="section-subtitle">Discover some of the impactful projects we’ve worked on to deliver exceptional results for our clients.</p>
-                <div class="row">
-                    <!-- First 6 Projects -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="Images/pexels-photo-12737420.jpeg" alt="Boundary Mapping Project">
-                        </div>
-                        <h3 class="project-title">Boundary Mapping</h3>
-                        <p class="project-description">
-                            Providing precise boundary surveys for large-scale agricultural land and urban development projects.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image">
-                            <img src="Images/pexels-photo-9751100.jpeg" alt="Infrastructure Surveys Project">
-                        </div>
-                        <h3 class="project-title">Infrastructure Surveys</h3>
-                        <p class="project-description">
-                            Delivering accurate topographic and engineering surveys for road and bridge construction.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-image">
-                            <img src="Images/free-photo-of-aerial-view-of-construction-site-in-londrina-brazil.jpeg" alt="Geospatial Solutions Project">
-                        </div>
-                        <h3 class="project-title">Geospatial Solutions</h3>
-                        <p class="project-description">
-                            Developing GIS-based solutions for urban planning and environmental conservation.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="Images/pexels-digitalbuggu-171328.jpg" alt="Construction Survey Project">
-                        </div>
-                        <h3 class="project-title">Construction Survey</h3>
-                        <p class="project-description">
-                            Precision surveys for construction projects including residential and commercial buildings.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image">
-                            <img src="Images/pexels-photo-5802827.jpeg" alt="Urban Development Project">
-                        </div>
-                        <h3 class="project-title">Urban Development</h3>
-                        <p class="project-description">
-                            Surveying for efficient urban planning and infrastructure development.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-image">
-                            <img src="Images/free-photo-of-close-up-of-earthy-soil-texture-with-rocks.jpeg" alt="Soil Analysis Project">
-                        </div>
-                        <h3 class="project-title">Soil Analysis</h3>
-                        <p class="project-description">
-                            Comprehensive soil testing and analysis for agriculture and construction projects.
-                        </p>
-                    </div>
-                </div>
-    
-                <!-- Hidden Projects -->
-                <div class="row hidden" id="extra-projects">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image">
-                            <img src="Images/pexels-photo-9751100.jpeg" alt="Infrastructure Expansion Project">
-                        </div>
-                        <h3 class="project-title">Infrastructure Expansion</h3>
-                        <p class="project-description">
-                            Enhancing existing infrastructure with modern technology and precise planning.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-image">
-                            <img src="Images/pexels-punttim-443422.jpg" alt="Landscape Survey Project">
-                        </div>
-                        <h3 class="project-title">Landscape Survey</h3>
-                        <p class="project-description">
-                            Topographical mapping for sustainable landscaping and gardening projects.
-                        </p>
-                    </div>
-    
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                        <div class="project-image">
-                            <img src="Images/pexels-magda-ehlers-pexels-636342.jpg" alt="Environmental Impact Study">
-                        </div>
-                        <h3 class="project-title">Environmental Study</h3>
-                        <p class="project-description">
-                            Conducting studies to minimize environmental impact and promote sustainability.
-                        </p>
-                    </div>
-                </div>
-    
-                <!-- View More Button -->
-                <div class="text-center">
-                    <button class="view-more-btn" id="view-more-btn">View More Projects</button>
-                </div>
+
+            <!-- Right Column: Image -->
+            <div class="col-md-5 text-center">
+                <img src="Images/beacon.webp" alt="Surveying Equipment" class="services-image">
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Our Projects</h2>
+        <p class="section-subtitle">Discover some of the impactful projects we’ve worked on to deliver exceptional results for our clients.</p>
+        <div class="row">
+            <!-- First 6 Projects -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="Images/pexels-photo-12737420.jpeg" alt="Boundary Survey Project">
+                </div>
+                <h3 class="project-title">Boundary Surveys</h3>
+                <p class="project-description">
+                    Establishing precise property lines to prevent disputes and ensure legal land ownership.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="Images/pexels-photo-9751100.jpeg" alt="Topographic Survey Project">
+                </div>
+                <h3 class="project-title">Topographic Mapping</h3>
+                <p class="project-description">
+                    Providing elevation and terrain mapping for construction, infrastructure, and land-use planning.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="Images/free-photo-of-aerial-view-of-construction-site-in-londrina-brazil.jpeg" alt="Construction Staking Project">
+                </div>
+                <h3 class="project-title">Construction Staking</h3>
+                <p class="project-description">
+                    Accurate site marking for residential, commercial, and industrial construction projects.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="Images/pexels-digitalbuggu-171328.jpg" alt="Engineering Survey Project">
+                </div>
+                <h3 class="project-title">Engineering Surveys</h3>
+                <p class="project-description">
+                    Providing precise survey data for the design and execution of roads, bridges, and drainage systems.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="Images/pexels-photo-5802827.jpeg" alt="Geographic Survey Project">
+                </div>
+                <h3 class="project-title">Geographic Data Analysis</h3>
+                <p class="project-description">
+                    Comprehensive geospatial surveys for mapping, planning, and natural resource management.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="Images/free-photo-of-close-up-of-earthy-soil-texture-with-rocks.jpeg" alt="Environmental Survey Project">
+                </div>
+                <h3 class="project-title">Environmental & Soil Analysis</h3>
+                <p class="project-description">
+                    Conducting soil and environmental studies for sustainable development and agriculture.
+                </p>
+            </div>
+        </div>
+
+        <!-- Hidden Projects -->
+        <div class="row hidden" id="extra-projects">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="Images/pexels-photo-9751100.jpeg" alt="Infrastructure Development Project">
+                </div>
+                <h3 class="project-title">Infrastructure Planning</h3>
+                <p class="project-description">
+                    Supporting urban and rural infrastructure with precise survey data for roads, drainage, and utilities.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="Images/pexels-punttim-443422.jpg" alt="Landscape Survey Project">
+                </div>
+                <h3 class="project-title">Landscape & Terrain Analysis</h3>
+                <p class="project-description">
+                    Mapping natural and man-made features for sustainable land-use planning and development.
+                </p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image">
+                    <img src="Images/pexels-magda-ehlers-pexels-636342.jpg" alt="GIS & Mapping Solutions">
+                </div>
+                <h3 class="project-title">GIS & Mapping Solutions</h3>
+                <p class="project-description">
+                    Implementing GIS-based mapping solutions for resource management and urban planning.
+                </p>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center">
+            <button class="view-more-btn" id="view-more-btn">View More Projects</button>
+        </div>
+    </div>
+</section>
+
+
         <section id="happy-clients-section" class="happy-clients-section">
             <div class="container">
                 <h2 class="section-title">Our Happy Clients</h2>
